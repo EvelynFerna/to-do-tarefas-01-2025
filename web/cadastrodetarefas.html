@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cadastro de Tarefas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Gerenciamento de Tarefas</h1>
+    <nav>
+      <a href="index.html">Cadastro de Usuários</a>
+      <a href="cadastrodetarefas.html">Cadastro de Tarefas</a>
+      <a href="gerenciartarefas.html">Gerenciar Tarefas</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Cadastro de Tarefas</h2>
+    <form id="formTarefa">
+      <label for="descricao">Descrição:</label>
+      <input type="text" id="descricao" name="descricao" required />
+
+      <label for="setor">Setor:</label>
+      <input type="text" id="setor" name="setor" required />
+
+      <label for="prioridade">Prioridade:</label>
+      <select id="prioridade" name="prioridade" required>
+        <option value="">Selecione</option>
+        <option value="BAIXA">Baixa</option>
+        <option value="MEDIA">Média</option>
+        <option value="ALTA">Alta</option>
+      </select>
+
+      <label for="usuario">Usuário:</label>
+      <select id="usuario" name="usuario" required>
+        <option value="">Carregando usuários...</option>
+      </select>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <p id="mensagem"></p>
+  </main>
+
+  <script src="/api//src/controllers/tarefas.js"></script>
+  <script src="../api/src/data/tarefas.js"></script>
+
+</body>
+</html>
