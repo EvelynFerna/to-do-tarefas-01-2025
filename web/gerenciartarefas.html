@@ -1,72 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gerenciar Tarefas</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Gerenciamento de Tarefas</h1>
     <nav>
-      <a href="index.html">Cadastro de Usuários</a>
-      <a href="cadastrodetarefas.html">Cadastro de Tarefas</a>
-      <a href="gerenciartarefas.html">Gerenciar Tarefas</a>
+      <button onclick="window.location.href='index.html'">Cadastro de Usuários</button>
+      <button onclick="window.location.href='cadastrodetarefas.html'">Cadastro de Tarefas</button>
+      <button onclick="window.location.href='gerenciartarefas.html'">Gerenciar Tarefas</button>
     </nav>
   </header>
+
   <div class="container">
     <h2>Tarefas</h2>
     <div class="tarefas">
-      <div class="coluna">
+      <div class="coluna" data-status="A_FAZER">
         <h3>A Fazer</h3>
-        <div class="card">
-          <strong>Descrição:</strong> Descrição da tarefa de Alta Prioridade<br>
-          <strong>Setor:</strong> Setor Y<br>
-          <strong>Prioridade:</strong> Alta<br>
-          <strong>Vinculado a:</strong> Usuário A<br>
-          <button>Editar</button> <button>Excluir</button><br>
-          <select><option>A Fazer</option></select>
-          <button>Alterar Status</button>
-        </div>
-        <div class="card">
-          <strong>Descrição:</strong> Descrição da tarefa 1<br>
-          <strong>Setor:</strong> Setor J<br>
-          <strong>Prioridade:</strong> Média<br>
-          <strong>Vinculado a:</strong> Usuário B<br>
-          <button>Editar</button> <button>Excluir</button><br>
-          <select><option>A Fazer</option></select>
-          <button>Alterar Status</button>
-        </div>
       </div>
-      <div class="coluna">
+      <div class="coluna" data-status="FAZENDO">
         <h3>Fazendo</h3>
-        <div class="card">
-          <strong>Descrição:</strong> Descrição da tarefa de Baixa Prioridade<br>
-          <strong>Setor:</strong> Setor F<br>
-          <strong>Prioridade:</strong> Baixa<br>
-          <strong>Vinculado a:</strong> Usuário C<br>
-          <button>Editar</button> <button>Excluir</button><br>
-          <select><option>Fazendo</option></select>
-          <button>Alterar Status</button>
-        </div>
       </div>
-      <div class="coluna">
+      <div class="coluna" data-status="PRONTO">
         <h3>Pronto</h3>
-        <div class="card">
-          <strong>Descrição:</strong> Descrição da tarefa concluída<br>
-          <strong>Setor:</strong> Setor H<br>
-          <strong>Prioridade:</strong> Média<br>
-          <strong>Vinculado a:</strong> Usuário D<br>
-          <button>Editar</button> <button>Excluir</button><br>
-          <select><option>Pronto</option></select>
-          <button>Alterar Status</button>
-        </div>
       </div>
     </div>
-
   </div>
-  <script src="../api/src/data/gerenciamento.js"></script>
 
+  <script src="script.js"></script>
 </body>
 </html>
